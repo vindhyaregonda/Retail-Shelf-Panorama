@@ -1,0 +1,7 @@
+# Extra dependencies for the Streamlit web app (streamlit_app.py).
+# The CLI and library need none of these.
+#
+#   pip install -r requirements.txt -r requirements-app.txt
+#   streamlit run streamlit_app.py
+#
+streamlit>=1.30

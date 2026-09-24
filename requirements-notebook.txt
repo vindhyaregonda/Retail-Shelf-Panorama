@@ -1,0 +1,14 @@
+# Extra dependencies for the interactive walkthrough only.
+# The pipeline itself (requirements.txt) does not need any of these.
+#
+#   pip install -r requirements.txt -r requirements-notebook.txt
+#
+ipykernel>=6.0          # the Jupyter kernel itself
+matplotlib>=3.6         # all the plots in the walkthrough
+networkx>=3.0           # match-graph diagram
+
+# Optional: only needed to execute the notebook headlessly (e.g. in CI).
+# Running it as a plain script - `python notebooks/pipeline_walkthrough.py` -
+# needs neither of these.
+nbclient>=0.8
+nbformat>=5.0

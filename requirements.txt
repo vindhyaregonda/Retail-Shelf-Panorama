@@ -1,0 +1,12 @@
+# Core pipeline. Versions are the ones the submitted results were produced with;
+# the pipeline does not rely on anything version specific beyond USAC_MAGSAC
+# (OpenCV >= 4.5) and the cv2.detail seam/blend classes.
+numpy>=1.24
+opencv-contrib-python>=4.8      # needs cv2.detail_* and SIFT (contrib build)
+scipy>=1.10                     # least_squares for bundle adjustment
+
+# Optional: LoFTR fallback for pairs sparse features cannot connect.
+# The pipeline degrades gracefully to SIFT-only if these are absent -
+# run with --no-deep to skip them entirely.
+torch>=2.0
+kornia>=0.7
